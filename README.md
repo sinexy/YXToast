@@ -12,6 +12,7 @@
 `class func showIndicate(_ message: String?)`
 * 关闭指示器
 `class func hideToast()` 
+
 **有对应的实例方法**
 
 由两部分组成：
