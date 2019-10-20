@@ -17,6 +17,9 @@ class YXToast {
     
     let showWidth: CGFloat = 220
     let padding: CGFloat = 20
+    
+    let YX_SCREEN_WIDTH = UIScreen.main.bounds.width
+    let YX_SCREEN_HEIGHT = UIScreen.main.bounds.height
 }
 
 // MARK: - Open Class Method
@@ -149,7 +152,7 @@ extension YXToast {
     fileprivate func getLabel(_ message: String) -> UILabel {
         let label = UILabel()
         label.textColor = UIColor.white
-        label.font = FONT16
+        label.font = UIFont.systemFont(ofSize: 16)
         label.text = message
         label.numberOfLines = 0
         label.sizeToFit()
@@ -162,7 +165,7 @@ extension YXToast {
         var x,y,w,h,x1,y1,w1,h1: CGFloat
 
         if size.width > showWidth {
-            let msgSize = message.yx_getSize(FONT16, width: showWidth)
+            let msgSize = message.yx_getSize(UIFont.systemFont(ofSize: 16), width: showWidth)
             w = showWidth + padding
             h = msgSize.height + padding
                         w1 = showWidth
